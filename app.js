@@ -1,15 +1,33 @@
+"use strict";
 
-let Seattle={
-    name : "Seattle", 
-    mincus : 23 ,
-    maxcus : 65 ,
-    AvgCookie : 6.3 ,
-randmNumberCus : []
 
-function getRandomInt(max) {
 
-    return Math.floor(Math.random() * max);
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
   }
+
+function Seattle (name , mincus , maxcus , avgcookie , customerEachHour)
+{ 
+    this.name=name;
+    this.mincus=mincus;
+    this.maxcus=maxcus;
+    this.avgcookie=avgcookie;
+    this.customerEachhour=
+
+}
+
+// let Seattle={
+//     name : "Seattle", 
+//     mincus : 23 ,
+//     maxcus : 65 ,
+//     AvgCookie : 6.3 ,
+//     customerEachHour :[],
+// randmNumberCus : []
+
+// function getRandomInt(max) {
+
+//     return Math.floor(Math.random() * max);
+//   }
   
   console.log(getRandomInt());
  
@@ -58,3 +76,12 @@ let Lima= {
 randmNumberCus : []
 }
 
+
+
+let parent =document.getElementById('parent');
+console.log(parent);
+
+let table=document.createElement('table');
+
+
+parent.appendChild(table);
