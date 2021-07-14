@@ -1,18 +1,32 @@
-"use strict";
+// "use strict";
 
+let parent = document.getElEmentById('parent');
+let table = document.createElement('table');
+parent.appendChild(table);
+// let headingRow = document.createElementNS('tr');
+// table.appendChild(headingRow);
+let headings = ['avg', 'age'];
+for (let i = 0, i<headingRow.lenght; i++)
+    let theElements = document.createElement('th');
+headingRow.appendChild(theElements);
+theElements.textcontent = headings[i];
 
+function header(){
+    let header = document.createElementNS('tr');
+    table.appendChild(headingRow);
+}
 
 function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-  }
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 
-function Seattle (name , mincus , maxcus , avgcookie , customerEachHour)
-{ 
-    this.name=name;
-    this.mincus=mincus;
-    this.maxcus=maxcus;
-    this.avgcookie=avgcookie;
-    this.customerEachhour=
+}
+
+function Seattle(name, mincus, maxcus, avgcookie, customerEachHour) {
+    this.name = name;
+    this.mincus = mincus;
+    this.maxcus = maxcus;
+    this.avgcookie = avgcookie;
+    this.customerEachhour =
 
 }
 
@@ -28,60 +42,60 @@ function Seattle (name , mincus , maxcus , avgcookie , customerEachHour)
 
 //     return Math.floor(Math.random() * max);
 //   }
+
+console.log(getRandomInt());
+
+
+console.log(getRandomInt());
+
+
+console.log(Math.random());
   
-  console.log(getRandomInt());
- 
-  
-  console.log(getRandomInt());
- 
-  
-  console.log(Math.random());
-  
 
 }
 
 
-let Tokyo= {
-    name : "Tokyo", 
-    mincus :3 ,
-    maxcus : 24 ,
-    AvgCookie : 1.4 ,
-randmNumberCus : []
+let Tokyo = {
+    name: "Tokyo",
+    mincus: 3,
+    maxcus: 24,
+    AvgCookie: 1.4,
+    randmNumberCus: []
 }
 
 
-let Dubai= {
-    name : "Dubai", 
-    mincus :11 ,
-    maxcus : 38 ,
-    AvgCookie : 3.7 ,
-randmNumberCus : []
+let Dubai = {
+    name: "Dubai",
+    mincus: 11,
+    maxcus: 38,
+    AvgCookie: 3.7,
+    randmNumberCus: []
 }
 
 
-let Paris= {
-    name : "Paris", 
-    mincus :20 ,
-    maxcus : 38 ,
-    AvgCookie :2.3 ,
-randmNumberCus : []
+let Paris = {
+    name: "Paris",
+    mincus: 20,
+    maxcus: 38,
+    AvgCookie: 2.3,
+    randmNumberCus: []
 }
 
 
-let Lima= {
-    name : "Lima", 
-    mincus :2 ,
-    maxcus : 16 ,
-    AvgCookie :4.6  ,
-randmNumberCus : []
+let Lima = {
+    name: "Lima",
+    mincus: 2,
+    maxcus: 16,
+    AvgCookie: 4.6,
+    randmNumberCus: []
 }
 
 
 
-let parent =document.getElementById('parent');
+let parent = document.getElementById('parent');
 console.log(parent);
 
-let table=document.createElement('table');
+let table = document.createElement('table');
 
 
 parent.appendChild(table);
