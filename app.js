@@ -1,101 +1,639 @@
-// "use strict";
+'use strict';
 
-let parent = document.getElEmentById('parent');
-let table = document.createElement('table');
-parent.appendChild(table);
-// let headingRow = document.createElementNS('tr');
-// table.appendChild(headingRow);
-let headings = ['avg', 'age'];
-for (let i = 0, i<headingRow.lenght; i++)
-    let theElements = document.createElement('th');
-headingRow.appendChild(theElements);
-theElements.textcontent = headings[i];
+let hours = ['6 Am', '7 Am', '8 Am', '9 Am', '10 Am', '11 Am', '12 Pm', '1 Pm', '2 Pm', '3 Pm', '4 Pm', '5 Pm', '6 Pm', '7 Pm'];
 
-function header(){
-    let header = document.createElementNS('tr');
-    table.appendChild(headingRow);
-}
+ 
 
-function getRndInteger(min, max) {
+//  from w3Schooles
+
+function Random(min, max) {
+
     return Math.floor(Math.random() * (max - min + 1)) + min;
 
-}
-
-function Seattle(name, mincus, maxcus, avgcookie, customerEachHour) {
-    this.name = name;
-    this.mincus = mincus;
-    this.maxcus = maxcus;
-    this.avgcookie = avgcookie;
-    this.customerEachhour =
+    
 
 }
 
-// let Seattle={
-//     name : "Seattle", 
-//     mincus : 23 ,
-//     maxcus : 65 ,
-//     AvgCookie : 6.3 ,
-//     customerEachHour :[],
-// randmNumberCus : []
+ 
 
-// function getRandomInt(max) {
+let Seattle={
 
-//     return Math.floor(Math.random() * max);
-//   }
+    name : "Seattle", 
 
-console.log(getRandomInt());
+    mincus : 23 ,
 
+    maxcus : 65 ,
 
-console.log(getRandomInt());
+    AvgCookie : 6.3 ,
 
+    randmNumberCus : [],
 
-console.log(Math.random());
-  
+    avgCookieHour :[],
+
+ 
+
+getRandmNumberCus: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+ 
+
+        
+
+ 
+
+        this.randmNumberCus.push(Random(this.mincus, this. maxcus));
+
+ 
+
+    }
+
+},
+
+getAvgcookieHour: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+        this.avgCookieHour.push(Math.floor(this.randmNumberCus[i] * this.AvgCookie));
+
+ 
+
+    }
 
 }
 
-
-let Tokyo = {
-    name: "Tokyo",
-    mincus: 3,
-    maxcus: 24,
-    AvgCookie: 1.4,
-    randmNumberCus: []
-}
-
-
-let Dubai = {
-    name: "Dubai",
-    mincus: 11,
-    maxcus: 38,
-    AvgCookie: 3.7,
-    randmNumberCus: []
-}
-
-
-let Paris = {
-    name: "Paris",
-    mincus: 20,
-    maxcus: 38,
-    AvgCookie: 2.3,
-    randmNumberCus: []
-}
-
-
-let Lima = {
-    name: "Lima",
-    mincus: 2,
-    maxcus: 16,
-    AvgCookie: 4.6,
-    randmNumberCus: []
 }
 
 
 
-let parent = document.getElementById('parent');
-console.log(parent);
 
-let table = document.createElement('table');
+let parent;
+
+let h3;
+
+let ul;
+
+let li;
+
+ 
+
+Seattle.Render=function(){
+
+ parent = document.getElementById("sales");
+
+ h3=document.createElement("h3");
+
+parent.appendChild(h3);
+
+h3.textContent="Seattle";
+
+ 
+
+ ul=document.createElement("ul");
+
+ parent.appendChild(ul);
+
+ for (let i = 0; i < hours.length; i++) {
+
+    li=document.createElement("li");
+
+ul.appendChild(li);
+
+ 
+
+li.textContent=`${hours[i]}  ${this.avgCookieHour[i]}   Cookies`    
+
+     
+
+ }
 
 
-parent.appendChild(table);
+
+
+
+}
+
+ 
+
+Seattle.getRandmNumberCus();
+
+Seattle.getAvgcookieHour();
+
+Seattle.Render();
+
+
+
+
+
+
+let Tokyo ={
+
+    name : "Tokyo", 
+
+    mincus :3 ,
+
+    maxcus :24 ,
+
+    AvgCookie : 1.2 ,
+
+    randmNumberCus : [],
+
+    avgCookieHour :[],
+
+ 
+
+getRandmNumberCus: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+ 
+
+        
+
+ 
+
+        this.randmNumberCus.push(Random(this.mincus, this. maxcus));
+
+ 
+
+    }
+
+},
+
+getAvgcookieHour: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+        this.avgCookieHour.push(Math.floor(this.randmNumberCus[i] * this.AvgCookie));
+
+ 
+
+    }
+
+}
+
+}
+
+
+
+
+
+
+ 
+
+Tokyo.Render=function(){
+
+ parent = document.getElementById("sales");
+
+ h3=document.createElement("h3");
+
+parent.appendChild(h3);
+
+h3.textContent="Tokyo";
+
+ 
+
+ ul=document.createElement("ul");
+
+ parent.appendChild(ul);
+
+ for (let i = 0; i < hours.length; i++) {
+
+    li=document.createElement("li");
+
+ul.appendChild(li);
+
+ 
+
+li.textContent=`${hours[i]}  ${this.avgCookieHour[i]}   Cookies`    
+
+     
+
+ }
+
+
+
+
+
+}
+
+ 
+
+Tokyo.getRandmNumberCus();
+
+Tokyo.getAvgcookieHour();
+
+Tokyo.Render();
+
+
+
+let Dubai ={
+
+    name : "Dubai", 
+
+    mincus :11 ,
+
+    maxcus :38 ,
+
+    AvgCookie : 3.7 ,
+
+    randmNumberCus : [],
+
+    avgCookieHour :[],
+
+ 
+
+getRandmNumberCus: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+ 
+
+        
+
+ 
+
+        this.randmNumberCus.push(Random(this.mincus, this. maxcus));
+
+ 
+
+    }
+
+},
+
+getAvgcookieHour: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+        this.avgCookieHour.push(Math.floor(this.randmNumberCus[i] * this.AvgCookie));
+
+ 
+
+    }
+
+}
+
+}
+
+
+
+
+
+
+ 
+
+Dubai.Render=function(){
+
+ parent = document.getElementById("sales");
+
+ h3=document.createElement("h3");
+
+parent.appendChild(h3);
+
+h3.textContent="Dubia";
+
+ 
+
+ ul=document.createElement("ul");
+
+ parent.appendChild(ul);
+
+ for (let i = 0; i < hours.length; i++) {
+
+    li=document.createElement("li");
+
+ul.appendChild(li);
+
+ 
+
+li.textContent=`${hours[i]}  ${this.avgCookieHour[i]}   Cookies`    
+
+     
+
+ }
+
+
+
+
+
+}
+
+ 
+
+Dubai.getRandmNumberCus();
+
+Dubai.getAvgcookieHour();
+
+Dubai.Render();
+
+
+
+let Paris ={
+
+    name : "Paris", 
+
+    mincus :3 ,
+
+    maxcus :24 ,
+
+    AvgCookie : 1.2 ,
+
+    randmNumberCus : [],
+
+    avgCookieHour :[],
+
+ 
+
+getRandmNumberCus: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+ 
+
+        
+
+ 
+
+        this.randmNumberCus.push(Random(this.mincus, this. maxcus));
+
+ 
+
+    }
+
+},
+
+getAvgcookieHour: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+        this.avgCookieHour.push(Math.floor(this.randmNumberCus[i] * this.AvgCookie));
+
+ 
+
+    }
+
+}
+
+}
+
+
+
+
+
+
+ 
+
+Paris.Render=function(){
+
+ parent = document.getElementById("sales");
+
+ h3=document.createElement("h3");
+
+parent.appendChild(h3);
+
+h3.textContent="Paris";
+
+ 
+
+ ul=document.createElement("ul");
+
+ parent.appendChild(ul);
+
+ for (let i = 0; i < hours.length; i++) {
+
+    li=document.createElement("li");
+
+ul.appendChild(li);
+
+ 
+
+li.textContent=`${hours[i]}  ${this.avgCookieHour[i]}   Cookies`    
+
+     
+
+ }
+
+
+
+
+
+}
+
+ 
+
+Paris.getRandmNumberCus();
+
+Paris.getAvgcookieHour();
+
+Paris.Render();
+
+
+
+
+
+let Lima ={
+
+    name : "Lima", 
+
+    mincus :3 ,
+
+    maxcus :24 ,
+
+    AvgCookie : 1.2 ,
+
+    randmNumberCus : [],
+
+    avgCookieHour :[],
+
+ 
+
+getRandmNumberCus: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+ 
+
+        
+
+ 
+
+        this.randmNumberCus.push(Random(this.mincus, this. maxcus));
+
+ 
+
+    }
+
+},
+
+getAvgcookieHour: function () {
+
+    for (let i = 0; i < hours.length; i++) {
+
+        this.avgCookieHour.push(Math.floor(this.randmNumberCus[i] * this.AvgCookie));
+
+ 
+
+    }
+
+}
+
+}
+
+
+
+
+
+
+ 
+
+Lima.Render=function(){
+
+ parent = document.getElementById("sales");
+
+ h3=document.createElement("h3");
+
+parent.appendChild(h3);
+
+h3.textContent="Lima";
+
+ 
+
+ ul=document.createElement("ul");
+
+ parent.appendChild(ul);
+
+ for (let i = 0; i < hours.length; i++) {
+
+    li=document.createElement("li");
+
+ul.appendChild(li);
+
+ 
+
+li.textContent=`${hours[i]}  ${this.avgCookieHour[i]}   Cookies`    
+
+     
+
+ }
+
+
+
+
+
+}
+
+ 
+
+Lima.getRandmNumberCus();
+
+Lima.getAvgcookieHour();
+
+Lima.Render();
+
+
+
+
+
+
+
+
+
+
+// let names=[Seattle,Tokyo,];
+
+// for (let i = 0; i <names.length; i++) {
+
+//     console.log(names[i])
+
+//    names[i].getRandmNumberCus();
+
+//    names[i].getAvgcookieHour();
+
+//     names[i].Render();
+
+ 
+
+    
+
+// }
+
+
+
+
+
+
+
+
+
+
+// let Tokyo= {
+
+//     name : "Tokyo", 
+
+//     mincus :3 ,
+
+//     maxcus : 24 ,
+
+//     AvgCookie : 1.4 ,
+
+// randmNumberCus : [],
+
+// avgCookieHour :[],
+
+// }
+
+ 
+
+// let Dubai= {
+
+//     name : "Dubai", 
+
+//     mincus :11 ,
+
+//     maxcus : 38 ,
+
+//     AvgCookie : 3.7 ,
+
+// randmNumberCus : [],
+
+// avgCookieHour :[],
+
+// }
+
+ 
+
+// let Paris= {
+
+//     name : "Paris", 
+
+//     mincus :20 ,
+
+//     maxcus : 38 ,
+
+//     AvgCookie :2.3 ,
+
+// randmNumberCus : [],
+
+// avgCookieHour :[],
+
+// }
+
+ 
+
+// let Lima= {
+
+//     name : "Lima", 
+
+//     mincus :2 ,
+
+//     maxcus : 16 ,
+
+//     AvgCookie :4.6  ,
+
+// randmNumberCus : [],
+
+// avgCookieHour :[],
+
+// }
+
+ 
