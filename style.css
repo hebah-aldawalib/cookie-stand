@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
+
+
 table,tr,th,td{
     border: 1px solid black;
     border-collapse: collapse;
@@ -6,3 +12,37 @@ table,tr,th,td{
 .UserName {
     padding-left:50pex;
 }
+
+
+
+header  img{
+    display: block;
+    width: 25%;
+    justify-content: left;
+ padding: 20px;
+
+  }
+
+
+ .shop {
+     font-size: 30px;
+     color: blue;
+     font-family: 'Zen Tokyo Zoo', cursive;
+    
+text-decoration: darkred;
+     
+ }
+
+ body {
+     background-color: rgb(218, 29, 192);
+
+ }
+
+ h2 {
+     color: blue;
+     font-family: 'Zen Tokyo Zoo', cursive;
+    
+ }
+ p{
+    font-family: 'Encode Sans SC', sans-serif;
+    color:black ;
